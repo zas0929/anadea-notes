@@ -53,13 +53,23 @@ function router(app, express, mongoose) {
     })
     app.get('/search', function(req, res) {
         var searchTitle = req.query.searchTitle;
-        notesModel.findOne({"title" : searchTitle}, function(err, note) {
-            console.log("search result: " + note );
-            res.render('search', {
-                data: note
-            });
+        notesModel.find({"title" : searchTitle}, function(err, note) {
+            // console.log("search result: " + note[0].title);
+            var answer = [];
+            for (var i = 0; i < note.length; i++) {
+                answer.push(note[i].title);
+                answer.push(note[i].description);
+
+            }
+            console.log(answer);
+            res.send(answer);
+            // res.render('search')
+            // res.render('template', {
+            //     data: note
+            // });
         });
     });
+
     app.use(express.static(__dirname + "/../public"));
 
 }

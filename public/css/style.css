@@ -2,6 +2,9 @@ body {
     font: 14px 'Arial', sans-serif;
     color: #333;
 }
+* {
+    outline: none;
+}
 .fa {
     margin: 0 2px;
     cursor: pointer;
@@ -51,15 +54,21 @@ body {
     width: 100%;
     padding: 3px 10px;
     box-sizing: border-box;
+    border-radius: 3px;
+    border: solid 1px #ccc;
 }
 .add-note__text {
     width: 100%;
     padding: 3px 10px;
     box-sizing: border-box;
     resize: none;
+    border-radius: 3px;
+    border: solid 1px #ccc;
 }
 .search-note__field {
     padding: 3px 10px;
+    border-radius: 3px;
+    border: solid 1px #ccc;
 }
 .search-note__btn,
 .add-note__btn,
@@ -86,4 +95,16 @@ body {
 .notes-list__edit-block {
     display: none;
     max-width: 200px;
+}
+.error {
+    border: solid 1px #cc0000;
+}
+.search-note__item {
+    list-style: none;
+    font-size: 18px;
+
+}
+.search-note__item:nth-child(2n) {
+    margin-bottom: 20px;
+    font-size: 14px;
 }

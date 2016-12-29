@@ -35,13 +35,17 @@ $(document).ready(function() {
         });
     });
     //search-note__btn
-    $('.search-note__btn').on('click', function() {
+    $('.search-note__btn').on('click', function(event) {
+        event.preventDefault();
         var searchTitle = $(this).siblings('.search-note__field').val();
         $.ajax({
             url: '/search?searchTitle=' + searchTitle + '',
             async: true,
-        }).done(function() {
-            console.log(note);
+        }).done(function(data) {
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                $('.search-note__list').append('<li class="search-note__item">' + data[i] + '</li>');
+            }
         });
     });
     //show edit block
