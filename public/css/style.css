@@ -1,0 +1,89 @@
+body {
+    font: 14px 'Arial', sans-serif;
+    color: #333;
+}
+.fa {
+    margin: 0 2px;
+    cursor: pointer;
+}
+.container {
+    padding: 20px 40px;
+    max-width: 300px;
+}
+.notes-list {
+    list-style: none;
+    margin-bottom: 50px;
+}
+.notes-list__title {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding-right: 15px;
+}
+.notes-list__item {
+    margin-bottom: 25px;
+}
+.notes-list__more {
+    color: #00cc00;
+    transition: 0.2s;
+}
+.notes-list__description {
+    margin-bottom: 0;
+    display: none;
+}
+.notes-list__edit {
+    color: #cccc00;
+    transition: 0.2s;
+}
+.notes-list__remove {
+    color: #cc0000;
+    transition: 0.2s;
+}
+.notes-list__more:hover,
+.notes-list__edit:hover,
+.notes-list__remove:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.add-note__tittle {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 3px 10px;
+    box-sizing: border-box;
+}
+.add-note__text {
+    width: 100%;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+.search-note__field {
+    padding: 3px 10px;
+}
+.search-note__btn,
+.add-note__btn,
+.add-note__btn-edit {
+    padding: 4px 10px;
+    border: none;
+    background: #00cc00;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.search-note__btn:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.add-note__btn,
+.add-note__btn-edit {
+    display: block;
+    text-align: center;
+    width: 70px;
+    margin: 15px auto;
+}
+.notes-list__edit-block {
+    display: none;
+    max-width: 200px;
+}

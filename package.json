@@ -1,0 +1,17 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "notes with nodejs and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Roman Lisovskiy",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.5",
+    "nconf": "^0.8.4"
+  }
+}
