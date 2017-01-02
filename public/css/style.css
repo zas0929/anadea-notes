@@ -81,7 +81,8 @@ body {
     cursor: pointer;
     transition: 0.2s;
 }
-.search-note__btn:hover {
+.search-note__btn:hover,
+.add-note__btn:hover {
     opacity: 0.8;
     transition: 0.2s;
 }

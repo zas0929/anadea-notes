@@ -11,8 +11,6 @@ function router(app, express, mongoose) {
         description: "test description note"
     });
     // note.save();
-
-    console.log(note);
     app.get('/', function(req, res) {
         //all notes
         notesModel.find(function(err, notes) {
@@ -31,8 +29,6 @@ function router(app, express, mongoose) {
     app.get('/add', function(req, res) {
         var titleReq = req.query.titleAdd;
         var descReq = req.query.descAdd;
-        console.log(titleReq);
-        console.log(descReq);
         var note = new notesModel({
             title: titleReq,
             description: descReq
@@ -67,7 +63,6 @@ function router(app, express, mongoose) {
                     answer.push(note[i].description);
                 }
             }
-            console.log(answer);
             res.send(answer);
         });
     });
